@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffcccc;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.gameContainer {
+    background-image: url('imgs/MitRoad.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.student {
+    background-image: url('imgs/Student.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 252px;
+    height: 210px;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    z-index: 2;
+}
+
+.guard {
+    width: 150px;
+    height: 150px;
+    background-image: url('imgs/Guard.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 70%;
+    z-index: 1;
+}
+
+.animateStudent {
+    animation: student 0.6s linear;
+}
+
+.guardAni {
+    animation: guardAni 5s linear infinite;
+}
+
+.gameOver {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    border: 2px solid black;
+    color: rgb(124, 17, 119);
+    background-color: rgb(203, 232, 241);
+    padding: 15px 30px;
+    
+}
+
+.restart {
+    font-size: 1.5rem;
+    background-color: lightblue;
+    font-weight: bold;
+    position: absolute;
+    right: 7%;
+    top: 10%;
+    border: 2px solid black;
+    padding: 0.5rem 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#scoreCont {
+    font-size: 1.5rem;
+    color: #54212f;
+    font-weight: bold;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    border: 2px solid black;
+    padding: 0.5rem 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+    background-color: rgba(59, 4, 4, 0.8);
+}
+
+@keyframes student {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 50vh;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes guardAni {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -15%;
+    }
+}
